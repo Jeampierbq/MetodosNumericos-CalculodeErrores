@@ -1,0 +1,74 @@
+body {
+    background-image: url('https://i.pinimg.com/564x/48/bd/2e/48bd2ebf4d1061cd55ab58b7b61aa299.jpg'); /* Reemplaza 'ruta-de-la-imagen.jpg' con la ruta de tu imagen */
+    background-size: cover; /* Ajusta el tamaño de la imagen para cubrir todo el fondo */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 16px;
+    padding-top: 55px;
+}
+
+ header{
+    z-index: 999;
+    background: #000000;
+    position: fixed;
+    width: 100%;
+    top: 0;
+}
+
+
+.menu{
+    margin-top: 60px;
+}
+
+h1{
+    font-family: 'Otra Fuente', Open; 
+    font-size: 30px; 
+    font-weight: bold; 
+    color: #ffffff; 
+    margin-bottom: -30px;
+}
+
+  .enlace{
+    display: inline-block;
+    padding: 4px 10px;
+    background-color: #ffffff;
+    color: #000000;
+    border-radius: 0px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+    margin-left: 1000px;
+   
+} 
+
+ /* Cambiar el color del texto a azul */
+.menu label {
+    color: rgb(255, 255, 255);
+}
+
+/* Cambiar el estilo de fuente a cursiva */
+.menu input[type="text"] {
+    font-style: italic;
+}
+
+/* Cambiar el color de fondo de los campos de entrada */
+.menu input[type="number"] {
+    font-family: 'Otra Fuente', Open, sans-serif;
+    font-style: italic;
+    color: #333333; /* Color del texto */
+    background-color: #f0f0f0; /* Color de fondo gris claro */
+    border: 1px solid #ccc; /* Borde delgados */
+    border-radius: 5px; /* Bordes redondeados */
+    padding: 5px; /* Espaciado interno */
+}
+
+/* Cambiar el color del botón y agregar bordes redondeados */
+.menu button {
+    background-color: #ff0000; /* Color de fondo verde */
+    color: #000000; /* Texto en blanco */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados */
+    padding: 10px 20px; /* Espaciado interno */
+    margin-left: 10px; /* Moverlo un poco a la derecha */
+}
+
+

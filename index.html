@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="shortcut icon" href="./res/img/favicon.png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <title>Metodos Numericos</title>
+</head>
+
+<body>
+    <header id="header">
+        <nav class="menu">
+            <div class="logo">
+                <a href="#"><i class="fas fa-calculator"></i> Calculadora de Métodos</a>
+                <a href="#" class="btn-menu" id="btn-menu"><i class="fas fa-bars icono"></i></a>
+            </div>
+            <div class="metodos">
+                <select id="methods">
+                    <option value="-1">Seleccione un método</option>
+                    <option value="1">Método: Bisección</option>
+                    <option value="2">Método: Falsa posición</option>
+                    <option value="3">Método: Secante</option>
+                    <option value="4">Método: Newton</option>
+                    <option value="5">Método:  Punto Fijo</option>
+                </select>
+            </div>
+            <div class="enlace-externo">
+                <a href="Grafica.html" class="enlace">Grafica de Metodos</a>
+            </div>
+        </nav>
+    </header>
+
+    <section>
+        <article class="article">
+            <div class="article-header">
+                <h1>Datos de entrada</h1>
+            </div>
+            <hr>
+            <div class="article-info">
+                <form id="form">
+                    <label>Funcion</label>
+                    <input type="text" id="inpFuncion" placeholder="Ejemplo: x^3+3*x^2+12*x+8 ¡NO AGREGAR =0!"
+                        autocomplete="off" required></input>
+                    <a href="" class="howTo" title=" "><i class=""></i></a>
+                    <div class="limites">
+                        <div class="valores">
+                            <label>Valor inicial X0</label>
+                            <input type="text" id="inpX0" placeholder="Ejemplo: -2" required></input>
+                        </div>
+                        <div class="valores">
+                            <label>Valor inicial X1</label>
+                            <input type="text" id="inpX1" placeholder="Ejemplo: -5" required></input>
+                        </div>
+                        <div class="valores">
+                            <label id="lblTolerancia">Tolerancia deseada</label>
+                            <input type="text" id="inpTolerancia" placeholder="Ejemplo: 0.0001" required></input>
+                        </div>
+                        <div class="valores CalcStyle">
+                            <p>Modo de calculo</p>
+                            <select name="tipoCalc" id="tipoCalc" required>
+                                <option value="1">Es: Tolerancia deseada</option>
+                                <option value="2">Iteraciones</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="limites">
+                        <div class="valores">
+                            <label>Presición: <b><span id="lblRange">4</span></b> decimales</label>
+                            <input type="range" id="inpRange" value="4" max="20" min="2" required></input>
+                        </div>
+                    </div>
+
+            </div>
+            <div class="container-btn">
+                <button class="btnActions" type="button" id="btnReset">Limpiar</button>
+                <button class="btnActions" type="button" id="btnCalc">Calcular</button>
+            </div>
+            </form>
+            </div>
+        </article>
+    </section>
+
+    <section id="r-container">
+        <article class="article">
+            <div class="article-header">
+                <h1>Resultados</h1>
+                <a href="#" class="article-header-collapse"><i class="far fa-minus-square"></i></a>
+            </div>
+            <hr>
+            <div class="article-info">
+                <div class="results">
+                    <div class="formula">
+                        <label style="color: aliceblue;">Formula</label>
+                        <div id="math-preview"></div>
+                        <a href="#" class="howTo" id="noEsperado"
+                            title="Una pequeña información para utilizar el programa.">
+                            <i class="fas fa-info-circle"></i>¿No se muestra como esperabas?
+                        </a>
+                    </div>
+
+                    <div class="result-content">
+                        <div style="color: aliceblue;" class="result-title">
+                            <label style="color: aliceblue;">Resultados</label>
+                        </div>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Iteración</th>
+                                    <th>X0</th>
+                                    <th>F(X0)</th>
+                                    <th>X1</th>
+                                    <th>F(X1)</th>
+                                    <th>Xr</th>
+                                    <th>F(Xr)</th>
+                                    <th>Ea</th>
+                                </tr>
+                            </thead>
+                            <tbody id="tableBody"></tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </article>
+        <!--AQUI LA SECCION GRAFICA-->
+        <section id="grafico" style="display: none;">
+            <h1>Gráfico:</h1>
+            <canvas id="grafico-canvas"></canvas>
+        </section>
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        <script id="MathJax-script" async
+            src="https://cdn.jsdelivr.net/npm/mathjax@3.0.1/es5/tex-mml-chtml.js"></script>
+        <script src="scripts/math.js"></script>
+        <script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+        <script src="scripts/jquery-3.6.0.min.js"></script>
+        <script src="scripts/app.js" type="module"></script>
+</body>
+
+</html>
