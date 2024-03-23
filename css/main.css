@@ -1,0 +1,522 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body {
+    background-image: url('https://i.pinimg.com/564x/48/bd/2e/48bd2ebf4d1061cd55ab58b7b61aa299.jpg'); /* Reemplaza 'ruta-de-la-imagen.jpg' con la ruta de tu imagen */
+    background-size: cover; /* Ajusta el tamaño de la imagen para cubrir todo el fondo */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 16px;
+    padding-top: 55px;
+}
+
+
+header{
+    z-index: 999;
+    background: #000000;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    border-bottom: 3px solid #0f1425;
+}
+.enlace{
+    display: inline-block;
+    padding: 7px 15px;
+    background-color: #ffffff;
+    color: #000000;
+    border-radius: 0px;
+    text-decoration: none;
+    margin-right: -4000px;
+    transition: background-color 0.3s;
+} 
+
+h1{
+    font-family: 'Otra Fuente', Open; 
+    font-size: 30px; 
+    font-weight: bold; 
+    color: #ffffff; 
+ }
+
+
+#form {
+    font-family: 'Otra Fuente', Open; /* Reemplaza 'Otra Fuente' con la fuente que desees utilizar */
+    font-size: 18px; /* Tamaño del texto, ajusta según tus preferencias */
+    font-weight: bold; /* Hace que el texto esté en negrita */
+    color: #ffffff; /* Color del texto en negro (opcional) */
+}
+
+
+.menu
+{
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu .logo
+{
+    order: 0;
+    display: inline-block;
+    margin-right: 1em;
+}
+
+.menu .logo a{
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 300;   
+}
+
+.menu .logo a i
+{
+    margin-right: 5px;
+}
+
+.menu .logo img
+{
+    vertical-align: top;
+    height: 22px;
+}
+
+.menu .metodos
+{
+    order: 1;
+}
+
+.menu .metodos #methods
+{
+    padding: 10px;
+}
+
+.menu .btn-menu
+{
+    display: none;
+    color: #e71111;
+    text-decoration: none;
+    font-size: 1em;
+}
+
+.menu .enlaces
+{
+    order: 1;
+    display: inline-block;
+    text-align: right;
+}
+
+.menu .enlaces a
+{
+    display: inline-block;
+    color: #d4d4d4;
+    text-decoration: none;
+    padding: 1em;
+    text-align: center;
+    font-size: 1em;
+}
+
+.menu .enlaces a:hover
+{
+    background: #ff0505;
+    color: #ffffff;
+    transition: all ease-in 0.3s;
+}
+
+.menu .enlaces i
+{
+    margin-right: 5px;
+}
+
+section
+{
+    width: 90%;
+    max-width: 1100px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #3d3f324e;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.75);
+
+}
+
+#r-container
+{
+    display: none;
+}
+
+section article .article-header
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+section article .article-span
+{
+    text-align: center;
+    display: block;
+}
+
+section article .article-header a i
+{
+    transform: rotate(180deg);
+}
+
+section article h1{
+    display: inline-block;
+    font-weight: normal;
+    margin-bottom: 0.5em;
+}
+
+section article hr
+{
+    margin-bottom: 1em;
+    height: 2px;
+    background: #000000;
+    border: none;
+}
+
+section article p
+{
+    text-align: justify;
+}
+
+
+#form input[type="text"]
+{
+    width: 100%;
+    background: #c6c3c3;
+    border-radius: 10px 10px 0px 0px;
+    outline: none;
+    border: none;
+    font-size: 1.2rem;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.5);
+    padding: 13px;
+}
+
+.howTo
+{
+    display: inline-block;
+    margin-top: 5px;
+    text-decoration: none;
+}
+
+.howTo i
+{
+    margin-right: 5px;
+}
+
+.howTo:hover
+{
+    color: #000;
+}
+
+
+
+#form .limites
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+#form .limites .valores
+{
+    flex-wrap: wrap;
+    display: inline-block;
+    margin: 0px 5px;
+}
+
+#form .limites .CalcStyle
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 400px;
+}
+
+#form .limites .CalcStyle select
+{
+    margin: 10px;
+}
+
+#form .limites .CalcStyle p
+{
+    width: 100%;
+    text-align: center;
+}
+
+
+
+#form .limites .valores input[type="range"]
+{
+    width: 100%;
+}
+
+#form .limites .valores input[type='range']:focus {
+    outline: none;
+  }
+
+input[type='range'],
+input[type='range']::-webkit-slider-runnable-track,
+input[type='range']::-webkit-slider-thumb {
+  -webkit-appearance: none;
+}
+
+
+
+#form .limites .valores input[type=range]::-webkit-slider-thumb {
+    background-color: #f2f2f2;
+    width: 20px;
+    height: 20px;
+    border: 3px solid #333;
+    border-radius: 50%;
+    margin-top: -10px;
+  }
+
+  #form .limites .valores input[type=range]::-moz-range-thumb {
+    background-color: #777;
+    width: 15px;
+    height: 15px;
+    border: 3px solid #333;
+    border-radius: 50%;
+  }
+
+  #form .limites .valores input[type=range]::-ms-thumb {
+    background-color: #777;
+    width: 20px;
+    height: 20px;
+    border: 3px solid #333;
+    border-radius: 50%;
+  }
+
+  #form .limites .valores input[type=range]::-webkit-slider-runnable-track {
+    background-color: #060505;
+    height: 3px;
+  }
+
+  #form .limites .valores input[type=range]:focus::-webkit-slider-runnable-track {
+    outline: none;
+  }
+
+  #form .limites .valores input[type=range]::-moz-range-track {
+    background-color: #777;
+    height: 3px;
+  }
+  
+  #form .limites .valores input[type=range]::-ms-track {
+    background-color: #777;
+    height: 3px;
+  }
+  
+  #form .limites .valores input[type=range]::-ms-fill-lower {
+    background-color: HotPink
+  }
+  
+  #form .limites .valores input[type=range]::-ms-fill-upper {
+    background-color: black;
+  } 
+
+.container-btn
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: stretch ;
+    margin-top: 10px;
+}
+
+  .btnActions
+  {
+      border-radius: 10px;
+      padding: 10px;
+      background: #000000;
+      color: #fdfdfd;
+      margin: 10px;
+      outline: none;
+      cursor: pointer;
+      border-bottom: 2px solid #0f1425;
+  }
+
+  .btnActions:hover
+  {
+      background: #b6bbcd;
+  }
+
+  .btnActions:last-child
+  {
+      font-size: 20px;
+      font-weight: bold;
+  }
+
+  .btnActions:last-child:hover
+  {
+    background: #19223f;
+  }
+
+  table {
+    width: 100%;
+    margin: 10px auto;
+    border: 1px solid #ebf3fb;
+    border-collapse: collapse;
+  }
+  th, td {
+    text-align: center;
+    vertical-align: top;
+    padding: 0.3em;
+    caption-side: bottom;
+  }
+  
+  table th{
+    background: #fcfcfc;
+  }
+  
+  tr:nth-child(odd)
+  {
+    background: #8b8484;
+  }
+  
+  tr:nth-child(even)
+  {
+    background: #FFF;
+  }
+
+
+
+  .results
+  {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: stretch;
+  }
+
+  .results .result-content {
+      width: 100%;
+      overflow: auto;
+  }
+
+  .results .result-title
+  {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      overflow: auto;
+      align-items: center;
+  }
+
+  .results .result-title table
+  {
+    overflow: auto;
+    min-width: 10px;
+  }
+
+
+  #math-preview
+  {
+      font-size: 25px;
+  }
+
+
+
+@media screen and (max-width:700px) {
+    #form .limites
+    {
+        flex-direction: column;
+        justify-content: center;
+        align-items: stretch;
+    }
+
+    #form .limites .CalcStyle
+    {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+
+    #form .limites .CalcStyle p
+    {
+        width: 100%;
+    }
+
+    
+    #form .limites .CalcStyle .group
+    {
+        display: inline-block;
+        margin: 10px;
+    }
+
+    #form .limites .valores
+    {
+        margin: 10px 0px 0px 0px;
+    }
+}
+
+
+@media screen and (max-width:855px) {
+
+    header .menu
+    {
+        flex-direction: column;
+    }
+
+    header .menu .logo
+    {
+        width: 100%;
+        margin: 1em;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    header .menu .logo .btn-menu
+    {
+        display: inline-block;
+    }
+
+    header .menu .enlaces
+    {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    header .menu .enlaces a
+    {
+        flex-grow: 2;
+        text-align: center;
+    }
+
+    header .menu .metodos
+    {
+        display: none;
+        margin: 5px;
+        display: none;
+        order: 2;
+    }
+
+
+    
+
+}
+@media only screen and (max-width: 600px) {
+    /* Agrega aquí tus estilos para pantallas pequeñas */
+}
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+    /* Agrega aquí tus estilos para tablets */
+}
+@media only screen and (min-width: 1025px) {
+    /* Agrega aquí tus estilos para pantallas grandes */
+}

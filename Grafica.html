@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Graficar Metodos</title>
+    <link rel="stylesheet" href="css/grafica.css">
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/11.7.0/math.js"></script>
+</head>
+
+<body>
+    <header id="header">
+        <div><h1>Grafica de metodos</h1></div>
+        <nav>
+            <div class="enlace-externo">
+                <a href="index.html" class="enlace">Calculadora de Metodos</a>
+            </div>
+    </header>
+    </nav>
+    <br><div class="menu">
+        <label for="equationInput">Ingrese la ecuación:</label>
+        <input type="text" id="equationInput" placeholder="Ejemplo: cos(x) + sin(x) + exp(i*x)">
+        <label for="xMin">Límite inferior del eje X0:</label>
+        <input type="number" id="xMin" value="-10">
+        <label for="xMax">Límite superior del eje X1:</label>
+        <input type="number" id="xMax" value="10">
+        <button id="btnCalc">Graficar</button>
+        <div id="grafica"></div>
+    </div>
+    <script>
+        function graficarEcuacion() {
+            const resultadoDiv = document.getElementById("grafica");
+            const xMin = parseFloat(document.getElementById("xMin").value);
+            const xMax = parseFloat(document.getElementById("xMax").value);
+            const equationInput = document.getElementById("equationInput").value;
+
+            const xValues = [];
+            const yValues = [];
+
+            for (let x = xMin; x <= xMax; x += 0.1) {
+                xValues.push(x);
+                const expression = equationInput.replace(/x/g, x);
+                const result = math.evaluate(expression);
+                yValues.push(result);
+            }
+
+            const data = [{
+                x: xValues,
+                y: yValues,
+                type: 'scatter',
+                mode: 'lines',
+                name: 'Ecuación Ingresada'
+            }];
+
+            const layout = {
+                title: 'Gráfica de la Ecuación',
+                xaxis: { title: 'x', range: [xMin, xMax] },
+                yaxis: { title: 'y' }
+            };
+
+            Plotly.newPlot(resultadoDiv, data, layout);
+        }
+
+        document.getElementById("btnCalc").addEventListener("click", graficarEcuacion);
+    </script>
+</body>
+
+</html>
